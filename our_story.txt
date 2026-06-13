@@ -1,0 +1,9 @@
+About Us
+
+HOP AI Foundation is a non-profit initiative established to democratize Artificial Intelligence and ensure that its benefits reach every section of society, not just large companies or technology experts.
+
+The Foundation was created from real-world experience. Before founding HOP AI Foundation, the founders delivered various online and offline training sessions to social sector organizations throughout India. Drawing on the firsthand experience gained from these engagements, they subsequently developed the beginner- friendly 'AI for Non-profits' course specifically tailored for NGOs.
+
+During their work with nonprofit organizations across India, the founders observed a significant digital and technology gap. Many organizations were unable to invest in AI learning due to limited financial resources, while others were unaware of the practical benefits AI could bring to their day-to-day operations. As a result, they continued to rely heavily on manual processes, missing opportunities to save time, improve efficiency, and make better use of their limited resources. This experience reinforced the belief that AI education should not be restricted by affordability, technical background, or access to resources. Instead, AI learning should be simple, practical, accessible, and available to everyone especially grassroots institutions and individuals who can benefit the most from it.
+
+HOP AI Foundation was established to bridge this gap and promote inclusive AI adoption, ensuring that no community or sector is left behind in the digital future.

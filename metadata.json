@@ -1,0 +1,6 @@
+{
+  "name": "HOP AI Foundation",
+  "description": "Bridging the Technology Gap for the Social Sector.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

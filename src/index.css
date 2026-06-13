@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Poppins:wght@400;500;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Montserrat", sans-serif;
+  --font-body: "Poppins", sans-serif;
+  --font-sans: "Poppins", sans-serif;
+
+  --color-background: hsl(220 30% 98%);
+  --color-foreground: hsl(227 54% 15%);
+  --color-muted-foreground: hsl(227 25% 32%);
+  --color-primary: hsl(98 49% 52%);
+  --color-primary-foreground: hsl(0 0% 100%);
+  --color-secondary: hsl(227 54% 29%);
+  --color-secondary-foreground: hsl(0 0% 100%);
+  --color-muted: hsl(220 30% 95%);
+  --color-accent: hsl(211 71% 42%);
+  --color-accent-secondary: hsl(227 54% 29%);
+  --color-border: hsl(220 20% 88%);
+  --color-input: hsl(220 20% 88%);
+  --color-card: rgba(255, 255, 255, 0.74);
+  --color-card-foreground: hsl(227 54% 15%);
+}
+
+@layer base {
+  :root {
+    --background: 220 30% 98%;
+    --foreground: 227 54% 15%;
+    --muted-foreground: 227 25% 32%;
+    --primary: 98 49% 52%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 227 54% 29%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 220 30% 95%;
+    --accent: 211 71% 42%;
+    --accent-secondary: 227 54% 29%;
+    --border: 220 20% 88%;
+    --input: 220 20% 88%;
+    --card: 220 30% 98%;
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-body);
+    overflow-x: hidden;
+  }
+}
+
+@layer utilities {
+  .liquid-glass {
+    background: rgba(255, 255, 255, 0.72);
+    background-blend-mode: normal;
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(34, 51, 113, 0.12);
+    box-shadow: 0 4px 20px rgba(34, 51, 113, 0.03), inset 0 1px 1px rgba(255, 255, 255, 0.95);
+    position: relative;
+    overflow: hidden;
+  }
+  .liquid-glass::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 1px;
+    background: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.6) 0%,
+      rgba(255, 255, 255, 0.1) 40%,
+      rgba(114, 191, 74, 0.3) 100%
+    );
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+  }
+
+  .interactive-card {
+    background: rgba(255, 255, 255, 0.72);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(34, 51, 113, 0.12);
+    box-shadow: 0 4px 20px rgba(34, 51, 113, 0.03), inset 0 1px 1px rgba(255, 255, 255, 0.95);
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .interactive-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(114, 191, 74, 0.5);
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 16px 36px rgba(34, 51, 113, 0.1), 0 0 24px rgba(114, 191, 74, 0.18);
+  }
+
+  @keyframes glow-pulse {
+    0%, 100% { box-shadow: 0 0 12px rgba(114, 191, 74, 0.2), 0 0 24px rgba(114, 191, 74, 0.05); }
+    50%       { box-shadow: 0 0 24px rgba(114, 191, 74, 0.45), 0 0 48px rgba(114, 191, 74, 0.12); }
+  }
+  .animate-glow-pulse { animation: glow-pulse 2.4s ease-in-out infinite; }
+}
